@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth snap-y snap-mandatory">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="NN.jpeg">
+    <title>Nikhil Nebhavani</title>
+    <style>
+        .imgg{
+            background: linear-gradient(gray,white);
+            width: 300px;
+            height: 300px;
+            z-index: 1;
+            overflow: hidden;
+        }
+        .imgg div{
+            transition: 1.5s;
+            opacity: 0;
+            height: 100%;
+            width: 100%;
+            background-image: url("profile.jpeg");
+            z-index: 10;
+        }
+        .imgg:hover div{
+            opacity: 1;
+        }
+
+        .card{
+            background: rgb(255, 255, 255,0.1);
+            min-width:18rem;
+            cursor: pointer;
+            overflow: hidden;
+        }
+        .contactl{
+            background: rgba(215, 215, 215, 0.1);
+        }
+        .card .detail {
+            transform: translateY(150px);
+            opacity: 0;
+            transition: 0.5s;
+        }
+        .card:hover .detail{
+            transform: translateY(0px);
+            opacity: 1;
+        }
+        .card .detail img{
+            max-width: 16rem;
+        }
+        ::-webkit-scrollbar{
+            width: 0px;
+        }
+        ::-webkit-scrollbar-thumb{
+            background: linear-gradient(gray,white);
+            border-radius: 10px;
+
+        }
+        .contain::-webkit-scrollbar{
+            height: 0px;
+        }
+        /* main designing circle */
+        #main::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(black, white);
+            clip-path: circle(25% at right 63%);
+        }
+        #main::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(white, black);
+            clip-path: circle(20% at 10% 10%);
+        }
+        #contact::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(black, white);
+            clip-path: circle(25% at right 63%);
+        }
+        #contact::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(white, black);
+            clip-path: circle(20% at left 40%);
+        }
+          /* about designing circle */
+          #about::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(white, black);
+            clip-path: circle(15% at right 30%);
+        }
+        #about::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(black, white);
+            clip-path: circle(20% at left 65%);
+        }
+        #projects::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(white, black);
+            clip-path: circle(15% at right 75%);
+            
+        }
+       
+        /* i am... changer */
+        #main li {
+            position: relative;
+            top: 0;
+            margin-top: 1rem;
+            animation: slide 9s steps(3) infinite;
+        }
+
+        @keyframes slide {
+            100% {
+                top: -10.3rem;
+            }
+        }
+
+        #main ul li span {
+            position: relative;
+        }
+
+        #main ul li span::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background: black;
+            border-left: 10px solid white;
+            animation: typing 3s steps(25) infinite;
+        }
+
+        @keyframes typing {
+            100% {
+                left: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body class=" bg-black select-none">
+    <!-- Navbar -->
+    <div class="fixed z-50 top-0 h-16 min-w-full bg-black">
+        <img src="NN.jpeg" alt="logo" class="fixed left-0 m-4 w-14">
+        <div class="fixed right-0 m-4">
+            <a href="#main"
+                class="text-gray-600 text-xl font-mono lowercase hover:uppercase hover:text-white tracking-widest pr-5">home</a>
+            <a href="#about"
+                class="text-gray-600  text-xl font-mono lowercase hover:uppercase hover:text-white tracking-widest pr-5">about</a>
+            <a href="#projects"
+                class="text-gray-600 text-xl font-mono lowercase hover:text-white hover:uppercase  tracking-widest pr-5">projects</a>
+            <a href="#contact"
+                class="text-gray-600  text-xl font-mono lowercase hover:uppercase hover:text-white tracking-widest pr-5">contact</a>
+
+        </div>
+    </div>
+    <div>
+        <!-- Main Body  -->
+        <section id="main" class="snap-always snap-end relative min-w-full z-0 fixed top-0 min-h-screen">
+            <div class="absolute font-mono top-1/3 left-1/4">
+                <p class=" text-white text-2xl capitalize tracking-widest">I am</p>
+                <h1 class="text-white text-6xl uppercase mt-5 tracking-widest">Nikhil Nebhavani</h1>
+                <div class="h-14 overflow-hidden">
+                    <ul class="text-white text-3xl capitalize mt-5 tracking-widest">
+                        <li><span>A programmer .</span></li>
+                        <li><span>A Active learner .</span></li>
+                        <li><span>A Freelancer .</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="absolute top-1/2 left-1/2">
+                <div class="rounded-full imgg">
+                    <div></div>
+            </div>
+        </section>
+        <!-- About  -->
+        <section id="about" class="snap-always snap-end relative z-10 min-w-full min-h-screen bg-black">
+            <div class="absolute top-1/4 left-1/4 right-1/4">
+                <h2 class="text-center text-white text-5xl text-mono tracking-widest uppercase">About Me ! </h2>
+                <br>
+                <p class="border-2 rounded-lg p-3 m-2 text-justify text-white text-mono tracking-widest text-xl">Lorem ipsum dolor sit amet
+                    consectetur adipisicing elit. In veniam similique iure excepturi, vero quod accusantium provident
+                    velit rem omnis labore minima quia deserunt ratione laborum beatae, consectetur debitis numquam?</p>
+                    <br><br><br>
+                <h2 class="text-center text-white text-5xl text-mono tracking-widest uppercase">Technology I know </h2>
+                <br>
+                    <p class=" border-2 rounded-lg p-3 m-2 text-justify text-white text-mono tracking-widest text-xl">Lorem ipsum dolor sit amet
+                        consectetur adipisicing elit. In veniam similique iure excepturi, vero quod accusantium provident
+                        velit rem omnis labore minima quia deserunt ratione laborum beatae, consectetur debitis numquam?</p>
+             
+            </div>
+        </section>
+        <!-- projects  -->
+        <section id="projects" class="bg-black snap-always snap-end relative min-w-full min-h-screen">
+            <div class="absolute my-20 left-1/4 right-1/4">
+                <h2 class="text-center text-white text-5xl text-mono tracking-widset uppercase">My Projects</h2>
+            </div>
+            <div class="text-white flex flex-row overflow-x-scroll h-2/3 contain absolute top-1/4  max-w-full p-2">
+                  <div class="relative border-2 border-gray-500 rounded-lg m-2 card">
+                    <div class="detail min-w-full align-center p-2 text-center tracking-widest justify-center">
+                        <h2 class="text-2xl m-2">Project name</h2>
+                        <img class="m-2 rounded-lg" src="ab.jpg" alt="phots">
+                        <p class="m-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore accusamus aperiam officiis animi dolorum accusantium culpa, voluptatem expedita corporis quia officia, nisi qui voluptatibus</p>
+                        <button class=" bg-white rounded-lg text-gray-600  p-3 m-2 text-xl">know more -></button>              
+                    </div>
+                  </div>
+                  <div class="relative border-2 border-gray-500 rounded-lg m-2 card">
+                    <div class="detail min-w-full align-center p-2 text-center tracking-widest justify-center">
+                        <h2 class="text-2xl m-2">Project name</h2>
+                        <img class="m-2 rounded-lg" src="ab.jpg" alt="phots">
+                        <p class="m-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore accusamus aperiam officiis animi dolorum accusantium culpa, voluptatem expedita corporis quia officia, nisi qui voluptatibus</p>
+                        <button class=" bg-white rounded-lg text-gray-600  p-3 m-2 text-xl">know more -></button>              
+                    </div>
+                  </div>
+                  <div class="relative border-2 border-gray-500 rounded-lg m-2 card">
+                    <div class="detail min-w-full align-center p-2 text-center tracking-widest justify-center">
+                        <h2 class="text-2xl m-2">Project name</h2>
+                        <img class="m-2 rounded-lg" src="ab.jpg" alt="phots">
+                        <p class="m-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore accusamus aperiam officiis animi dolorum accusantium culpa, voluptatem expedita corporis quia officia, nisi qui voluptatibus</p>
+                        <button class=" bg-white rounded-lg text-gray-600  p-3 m-2 text-xl">know more -></button>              
+                    </div>
+                  </div>
+                  <div class="relative border-2 border-gray-500 rounded-lg m-2 card">
+                    <div class="detail min-w-full align-center p-2 text-center tracking-widest justify-center">
+                        <h2 class="text-2xl m-2">Project name</h2>
+                        <img class="m-2 rounded-lg" src="ab.jpg" alt="phots">
+                        <p class="m-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore accusamus aperiam officiis animi dolorum accusantium culpa, voluptatem expedita corporis quia officia, nisi qui voluptatibus</p>
+                        <button class=" bg-white rounded-lg text-gray-600  p-3 m-2 text-xl">know more -></button>              
+                    </div>
+                  </div>
+                  <div class="relative border-2 border-gray-500 rounded-lg m-2 card">
+                    <div class="detail min-w-full align-center p-2 text-center tracking-widest justify-center">
+                        <h2 class="text-2xl m-2">Project name</h2>
+                        <img class="m-2 rounded-lg" src="ab.jpg" alt="phots">
+                        <p class="m-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore accusamus aperiam officiis animi dolorum accusantium culpa, voluptatem expedita corporis quia officia, nisi qui voluptatibus</p>
+                        <button class=" bg-white rounded-lg text-gray-600  p-3 m-2 text-xl">know more -></button>              
+                    </div>
+                  </div>
+                  <div class="relative border-2 border-gray-500 rounded-lg m-2 card">
+                    <div class="detail min-w-full align-center p-2 text-center tracking-widest justify-center">
+                        <h2 class="text-2xl m-2">Project name</h2>
+                        <img class="m-2 rounded-lg" src="ab.jpg" alt="phots">
+                        <p class="m-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore accusamus aperiam officiis animi dolorum accusantium culpa, voluptatem expedita corporis quia officia, nisi qui voluptatibus</p>
+                        <button class=" bg-white rounded-lg text-gray-600  p-3 m-2 text-xl">know more -></button>              
+                    </div>
+                  </div>
+                  
+                  
+
+
+            </div>
+        </section>
+        <!-- contact  -->
+        <section id="contact" class="bg-black snap-always snap-end relative min-w-full min-h-screen">
+            <div class="absolute my-20 left-1/4 right-1/4">
+                <h2 class="text-center text-white text-5xl text-mono tracking-widset uppercase">Contact Me !</h2>
+                <div class="min-w-full contactl border-2 text-white flex rounded-lg mt-32">
+                    <a href="#" class="list-items w-4/12 p-4 cursor-pointer"><img class="w-11 hover:w-12 bg-white  m-2 rounded-lg" src="linkedin.png"><p  class="m-2">Linkdin</p></a>
+                    <a href="#" class="list-items w-4/12 p-4 cursor-pointer"><img class="w-11 hover:w-12 bg-white  m-2 rounded-lg" src="mail.png"><p  class="m-2 ">.Mail</p></a>
+                    <a href="#" class="list-items w-4/12 p-4 cursor-pointer"><img class="w-11 hover:w-12 bg-white  m-2 rounded-lg" src="instagram.png"><p  class="m-2 ">Instagram</p></a>
+                    <a href="#" class="list-items p-4 cursor-pointer"><img class="w-11 hover:w-12 bg-white  m-2 rounded-lg" src="github.png"><p  class="m-2 ">GitHub</p></a>
+                   
+                </div>
+
+            </div>
+
+        </section>
+    </div>
+  
+</body>
+
+</html>
